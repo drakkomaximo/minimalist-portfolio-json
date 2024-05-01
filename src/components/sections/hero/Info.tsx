@@ -41,6 +41,7 @@ const Info = ({ readOnly = false }: Props) => {
         value={label}
         onChange={handleBasic}
         readOnly={readOnly}
+        isTextArea
       >
         <h2>{label}</h2>
       </TextField>
