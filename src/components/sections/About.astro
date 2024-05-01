@@ -1,12 +1,14 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
+import Sumary from "@/components/sections/sumary/Sumary";
 
-import { basics } from "@cv"
-const { summary } = basics
+interface AboutProps {
+  readOnly?: boolean;
+}
+
+const { readOnly } = Astro.props as AboutProps;
 ---
 
 <Section title="Sobre mí">
-  <p>
-    {summary}
-  </p>
+  <Sumary client:load readOnly={readOnly} />
 </Section>
